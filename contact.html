@@ -169,87 +169,16 @@
                         </div>
                     </div>
                 </div>
-                <!-- Nuevo formulario para enviar correo -->
-                <div class="col-xl-4 col-lg-6 wow slideInUp" data-wow-delay="0.3s">
-                    <form id="contact-form" method="post" action="contact.php" role="form">
-                        <div class="messages"></div>
-                        <div class="controls">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                            <input id="form_name" type="text" name="name"
-                                            class="form-control border-0 bg-light px-4"
-                                            placeholder="Nombre" required="required"
-                                            data-error="Nombre es requerido.">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        
-                                        <input id="form_lastname" type="text" name="surname"
-                                            class="form-control border-0 bg-light px-4"
-                                            placeholder="Apellido" required="required"
-                                            data-error="Apellido es requerido.">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>                            
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                       
-                                        <input id="form_email" type="email" name="email"
-                                            class="form-control border-0 bg-light px-4"
-                                            placeholder="Correo" required="required"
-                                            data-error="Valid email is required.">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>                            
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="form_need">Como le ayudamos?</label>
-                                        <select id="form_need" name="need" class="form-control border-0 bg-light px-4"
-                                            required="required" data-error="Please specify your need." >
-                                            <option value=""></option>
-                                            <option value="Request quotation">Request quotation</option>
-                                            <option value="Request order status">Request order status</option>
-                                            <option value="Request copy of an invoice">Request copy of an invoice
-                                            </option>
-                                            <option value="Other">Other</option>
-                                        </select>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>                            
-                                <div class="col-md-12">
-                                                                          
-                                        <textarea id="form_message" name="message"
-                                            class="form-control border-0 bg-light px-4" placeholder="Mensaje"
-                                            rows="4" required="required"
-                                            data-error="Please, leave us a message."></textarea>
-                                        <div class="help-block with-errors"></div>                                   
-                                </div>
-                                <div class="col-md-12">
-                                    <input type="submit" class="btn btn-primary w-100 py-3" value="Enviar mensaje">
-                                </div>                            
-                                <div class="col-md-12">
-                                    <p class="text-muted">
-                                        <strong>*</strong> These fields are required. Contact form template by
-                                        <a href="https://bootstrapious.com/p/how-to-build-a-working-bootstrap-contact-form"
-                                            target="_blank">Bootstrapious</a>.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
 
-                    </form>
-                </div>
 
                 <!-- Cambio en formulario para enviar correo -->
-                <!-- <div class="col-xl-4 col-lg-6 wow slideInUp" data-wow-delay="0.3s">
-                    <form id="contactForm" name="sentMessage" novalidate="novalidate">
+
+                <div class="col-xl-4 col-lg-6 wow slideInUp" data-wow-delay="0.3s">
+                    <form id="contactForm" onsubmit="sendEmail()">
                         <div class="row g-3">
                             <div class="col-12">
 
-                                <input type="text" id="name" class="form-control border-0 bg-light px-4"
+                                <input type="text" id="nameUser" class="form-control border-0 bg-light px-4"
                                     placeholder="Your Name" style="height: 55px;">
 
                             </div>
@@ -258,12 +187,7 @@
                                     placeholder="Tu correo" style="height: 55px;"
                                     data-validation-required-message="Por favor ingresa tu dirección de correo.">
                             </div>
-                            <div class="col-12">
-                                <input type="tel" id="phone" class="form-control border-0 bg-light px-4"
-                                    placeholder="Tú teléfono *" style="height: 55px;"
-                                    data-validation-required-message="Por favor ingresa tu número de teléfono.">
-                            </div>
-
+                            
                             <div class="col-12">
                                 <textarea id="message" class="form-control border-0 bg-light px-4 py-3" rows="5"
                                     placeholder="Mensaje"
@@ -275,7 +199,7 @@
                             </div>
                         </div>
                     </form>
-                </div> -->
+                </div>
                 <div class="col-xl-4 col-lg-12 wow slideInUp" data-wow-delay="0.6s">
                     <iframe class="position-relative rounded w-100 h-100"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
@@ -387,7 +311,10 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
-    <script src="js/mail/contact.js"></script>
+     <!-- Email Javascript -->
+     <script src="js/mail/email.js"></script>
+     <script src="https://unpkg.com/nodemailer"></script>
+
 </body>
 
 </html>
