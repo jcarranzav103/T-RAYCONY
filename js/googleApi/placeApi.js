@@ -24,80 +24,66 @@ function getPlaceDetails(placeId) {
   }
 
   function cargarDatos(){
+  
     const testimonialCarousel = document.getElementById('idtestimonios');
-    testimonialCarousel.innerHTML="";
+    testimonialCarousel.innerHTML = '';
 
-    for (let i = 0; i < datos.length; i++) {
-        const testimonio = datos[i];
-      
-        const testimonialItem = document.createElement('div');
-        testimonialItem.classList.add('testimonial-item', 'text-center', 'text-white');
-        testimonialCarousel.appendChild(testimonialItem);
-      
-        const img = document.createElement('img');
-        img.classList.add('img-fluid', 'mx-auto', 'rounded', 'mb-4');
-        img.src = testimonio.profile_photo_url;
-        testimonialItem.appendChild(img);
+for (let i = 0; i < datos.length; i++) {
+    const testimonialItem = document.createElement('div');
+    testimonialItem.classList.add('testimonial-item', 'text-center', 'text-white');
 
-        const nombre = document.createElement('h4');
-        nombre.classList.add('text-white', 'mb-0');
-        nombre.textContent = testimonio.author_name;
-        testimonialItem.appendChild(nombre);
+    const img = document.createElement('img');
+    img.classList.add('img-fluid', 'mx-auto', 'rounded', 'mb-4');
+    img.src = datos[i].profile_photo_url;
 
-        const hr = document.createElement('hr');
-        hr.classList.add('mx-auto', 'w-25');
-        testimonialItem.appendChild(hr);
-      
-        const texto = document.createElement('p');
-        texto.classList.add('fs-5');
-        texto.textContent = testimonio.text;
-        testimonialItem.appendChild(texto);
-              
-      }   
+    
+    const nombre = document.createElement('h4');
+    nombre.classList.add('text-white', 'mb-0');
+    nombre.textContent = datos[i].author_name;
+
+    const hr = document.createElement('hr');
+    hr.classList.add('mx-auto', 'w-25');
+
+    const texto = document.createElement('p');
+    texto.classList.add('fs-5');
+    texto.textContent = datos[i].texto;
+
+
+    testimonialItem.appendChild(img);
+    testimonialItem.appendChild(texto);
+    testimonialItem.appendChild(hr);
+    testimonialItem.appendChild(nombre);
+
+    testimonialCarousel.appendChild(testimonialItem);
+}
+
+$(testimonialCarousel).owlCarousel('refresh');
+
       
   }
+
+  $(document).ready(function(){
+    $('#idtestimonios').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:false,
+        dots:false,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:2
+            },
+            1000:{
+                items:3
+            }
+        }
+    })
+});
+
+
   
-//   function cargarResenas(){
 
-//     let contenedor = document.getElementById("idtestimonios");
-//     contenedor.innerHTML = "";
-
-//     let itemContenedor;
-//     let imgContenedor;
-//     let resenaContenedor_p;
-//     let itemContenedor_hr;
-//     let itemContenedor_h4;
-    
-
-//     datos.forEach(review => {
-//         itemContenedor=document.createElement("div");
-//         itemContenedor.setAttribute("class", "testimonial-item text-center text-white");
-
-//         imgContenedor = document.createElement("img");
-//         imgContenedor.setAttribute("class","img-fluid mx-auto rounded mb-4");
-//         imgContenedor.setAttribute("src",review.profile_photo_url);
-       
-//         resenaContenedor_p = document.createElement("p");
-//         resenaContenedor_p.setAttribute("class","fs-5");
-//         resenaContenedor_p.appendChild(document.createTextNode(review.text));
-
-//         itemContenedor_hr = document.createElement("hr");
-//         itemContenedor_hr.setAttribute("class","mx-auto w-25");
-
-//         itemContenedor_h4 = document.createElement("h4");
-//         itemContenedor_h4.setAttribute("class","text-white mb-0");
-//         itemContenedor_h4.appendChild(document.createTextNode(review.author_name));
-
-//         itemContenedor.appendChild(imgContenedor);
-//         itemContenedor.appendChild(resenaContenedor_p);
-//         itemContenedor.appendChild(itemContenedor_hr);
-//         itemContenedor.appendChild(itemContenedor_h4);
-
-//         contenedor.appendChild(itemContenedor);
-
-//     });
-
-
-//   }
   
   
