@@ -80,7 +80,7 @@ for (let i = 0; i < 5; i++) {
 $('#idtestimonios').carousel('cycle');
 }
 
-window.onload= getPlaceDetails('ChIJ-9QqT3z5oI8RY_FsBnGbBhs');
+window.onload= getPlaceDetails;
 
   
 
