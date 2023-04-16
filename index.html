@@ -188,24 +188,88 @@
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-7">
-                    <div id="idtestimonios" class="owl-carousel testimonial-carousel rounded p-5 wow zoomIn"
+                    <div id="idtestimonios" class="carousel-inner rounded p-5 wow zoomIn"
                         data-wow-delay="0.6s">
-                        <div class="testimonial-item text-center text-white">
-                            <img class="img-fluid mx-auto rounded mb-4" src="img/testimonial-1.jpg" alt="">
+
+                        <ol class="carousel-indicators">
+                            <li data-bs-target="#idtestimonios" data-bs-slide-to="0" class="active"></li>
+                            <li data-bs-target="#idtestimonios" data-bs-slide-to="1"></li>
+                            <li data-bs-target="#idtestimonios" data-bs-slide-to="2"></li>
+                            <li data-bs-target="#idtestimonios" data-bs-slide-to="3"></li>
+                            <li data-bs-target="#idtestimonios" data-bs-slide-to="4"></li>
+                          </ol>
+
+                        <div id="1" class="carousel-item active text-center text-white">
+                            <img id="img1" class="img-fluid mx-auto rounded mb-4"alt="">
+                            <h4 id="h41" class="text-white mb-0">cargar</h4>
+                            <hr class="mx-auto w-25">
+                            <p id="p1" class="fs-5">cargar</p>
+                        </div>
+                        <div id="2" class="carousel-item text-center text-white">
+                            <img id="img2" class="img-fluid mx-auto rounded mb-4"alt="">
+                            <h4 id="h42" class="text-white mb-0">cargar</h4>
+                            <hr class="mx-auto w-25">
+                            <p id="p2" class="fs-5">cargar</p>
+                        </div>
+                        <div id="3" class="carousel-item text-center text-white">
+                            <img id="img3" class="img-fluid mx-auto rounded mb-4"alt="">
+                            <h4 id="h43" class="text-white mb-0">cargar</h4>
+                            <hr class="mx-auto w-25">
+                            <p id="p3" class="fs-5">cargar</p>
+                        </div>
+                        <div id="4" class="carousel-item text-center text-white">
+                            <img id="img4" class="img-fluid mx-auto rounded mb-4" alt="">
+                            <h4 id="h44" class="text-white mb-0">cargar</h4>
+                            <hr class="mx-auto w-25">
+                            <p id="p4" class="fs-5">cargar</p>
+                        </div>
+                        <div id="5" class="carousel-item text-center text-white">
+                            <img id="img5" class="img-fluid mx-auto rounded mb-4"alt="">
+                            <h4 id="h45" class="text-white mb-0">cargar</h4>
+                            <hr class="mx-auto w-25">
+                            <p id="p5" class="fs-5">cargar</p>
+                        </div>
+                    </div>
+
+                    <!-- <div id="idtestimonios" class="owl-carousel testimonial-carousel rounded p-5 wow zoomIn"
+                        data-wow-delay="0.6s">
+                        <div id="1" class="testimonial-item text-center text-white">
+                            <img id="img1" class="img-fluid mx-auto rounded mb-4" src="img/testimonial-1.jpg" alt="">
                             <h4 class="text-white mb-0">Carlos Quesada</h4>
                             <hr class="mx-auto w-25">
                             <p class="fs-5">Excelente servicio y calidad en sus trabajos. Ya son 5 veces que acudo a
                                 ellos.</p>
                         </div>
-                        <div class="testimonial-item text-center text-white">
-                            <img class="img-fluid mx-auto rounded mb-4" src="img/testimonial-2.jpg" alt="">
+                        <div id="2" class="testimonial-item text-center text-white">
+                            <img id="img2" class="img-fluid mx-auto rounded mb-4" src="img/testimonial-2.jpg" alt="">
                             <h4 class="text-white mb-0">Carlos Segura</h4>
                             <hr class="mx-auto w-25">
                             <p class="fs-5">Don Rafael Carranza conocido como Ray Cony desde hace 35 años sirviendo a
                                 los clientes que necesitan servicio de tapicería automotriz.
                                 Especialistas en viniles y cueros ingleses.</p>
                         </div>
-                    </div>
+                        <div id="3" class="testimonial-item text-center text-white">
+                            <img id="img3" class="img-fluid mx-auto rounded mb-4" src="img/testimonial-1.jpg" alt="">
+                            <h4 class="text-white mb-0">Carlos Quesada</h4>
+                            <hr class="mx-auto w-25">
+                            <p class="fs-5">Excelente servicio y calidad en sus trabajos. Ya son 5 veces que acudo a
+                                ellos.</p>
+                        </div>
+                        <div id="4" class="testimonial-item text-center text-white">
+                            <img id="img4" class="img-fluid mx-auto rounded mb-4" src="img/testimonial-1.jpg" alt="">
+                            <h4 class="text-white mb-0">Carlos Quesada</h4>
+                            <hr class="mx-auto w-25">
+                            <p class="fs-5">Excelente servicio y calidad en sus trabajos. Ya son 5 veces que acudo a
+                                ellos.</p>
+                        </div>
+                        <div id="5" class="testimonial-item text-center text-white">
+                            <img id="img5" class="img-fluid mx-auto rounded mb-4" src="img/testimonial-1.jpg" alt="">
+                            <h4 class="text-white mb-0">Carlos Quesada</h4>
+                            <hr class="mx-auto w-25">
+                            <p class="fs-5">Excelente servicio y calidad en sus trabajos. Ya son 5 veces que acudo a
+                                ellos.</p>
+                        </div>
+                    </div> -->
                     <button class="btn-dark wow zoomIn" onclick="getPlaceDetails('ChIJ-9QqT3z5oI8RY_FsBnGbBhs')">Cargar
                         más
                         reseñas</button>
@@ -213,6 +277,8 @@
             </div>
         </div>
     </div>
+
+      
     <div id="map" style="display: none;"></div>
     <!-- Testimonial End -->
 

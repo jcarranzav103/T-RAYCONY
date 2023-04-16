@@ -3,7 +3,7 @@ var datos;
 function getPlaceDetails(placeId) {
     // Hacer una solicitud a la API Place de Google
     const request = {
-      placeId: placeId,
+      placeId: "ChIJ-9QqT3z5oI8RY_FsBnGbBhs",
       fields: ['name', 'rating', 'reviews']
     };
   
@@ -23,65 +23,64 @@ function getPlaceDetails(placeId) {
 
   }
 
-  function cargarDatos(){
+//   function cargarDatos(){
   
-    const testimonialCarousel = document.getElementById('idtestimonios');
-    testimonialCarousel.innerHTML = '';
+//     const testimonialCarousel = document.getElementById('idtestimonios');
+//     testimonialCarousel.innerHTML = '';
 
-for (let i = 0; i < datos.length; i++) {
-    const testimonialItem = document.createElement('div');
-    testimonialItem.classList.add('testimonial-item', 'text-center', 'text-white');
+// for (let i = 0; i < datos.length; i++) {
+//     const testimonialItem = document.createElement('div');
+//     testimonialItem.classList.add('testimonial-item', 'text-center', 'text-white');
 
-    const img = document.createElement('img');
-    img.classList.add('img-fluid', 'mx-auto', 'rounded', 'mb-4');
-    img.src = datos[i].profile_photo_url;
+//     const img = document.createElement('img');
+//     img.classList.add('img-fluid', 'mx-auto', 'rounded', 'mb-4');
+//     img.src = datos[i].profile_photo_url;
 
     
-    const nombre = document.createElement('h4');
-    nombre.classList.add('text-white', 'mb-0');
-    nombre.textContent = datos[i].author_name;
+//     const nombre = document.createElement('h4');
+//     nombre.classList.add('text-white', 'mb-0');
+//     nombre.textContent = datos[i].author_name;
 
-    const hr = document.createElement('hr');
-    hr.classList.add('mx-auto', 'w-25');
+//     const hr = document.createElement('hr');
+//     hr.classList.add('mx-auto', 'w-25');
 
-    const texto = document.createElement('p');
-    texto.classList.add('fs-5');
-    texto.textContent = datos[i].texto;
+//     const texto = document.createElement('p');
+//     texto.classList.add('fs-5');
+//     texto.textContent = datos[i].texto;
 
 
-    testimonialItem.appendChild(img);
-    testimonialItem.appendChild(texto);
-    testimonialItem.appendChild(hr);
-    testimonialItem.appendChild(nombre);
+//     testimonialItem.appendChild(img);
+//     testimonialItem.appendChild(texto);
+//     testimonialItem.appendChild(hr);
+//     testimonialItem.appendChild(nombre);
 
-    testimonialCarousel.appendChild(testimonialItem);
+//     testimonialCarousel.appendChild(testimonialItem);
+// }
+
+function cargarDatos(){
+  
+   const img='';
+   const nombre ='';
+   const texto ='';
+
+for (let i = 0; i < 5; i++) {
+ 
+  const img=document.getElementById("img"+(i+1));
+  const nombre =document.getElementById("h4"+(i+1));;
+  const texto =document.getElementById("p"+(i+1));;
+
+  img.src = "";
+  texto.textContent = "";
+  nombre.textContent = "";
+
+  img.src = datos[i].profile_photo_url;
+  texto.textContent = datos[i].text;
+  nombre.textContent = datos[i].author_name;
+}
+$('#idtestimonios').carousel('cycle');
 }
 
-$(testimonialCarousel).owlCarousel('refresh');
-
-      
-  }
-
-  $(document).ready(function(){
-    $('#idtestimonios').owlCarousel({
-        loop:true,
-        margin:10,
-        nav:false,
-        dots:false,
-        responsive:{
-            0:{
-                items:1
-            },
-            600:{
-                items:2
-            },
-            1000:{
-                items:3
-            }
-        }
-    })
-});
-
+window.onload= getPlaceDetails('ChIJ-9QqT3z5oI8RY_FsBnGbBhs');
 
   
 
