@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $mensaje .= "Hora: $hora\n";
 
   // Envia el correo electrónico
-  $destinatario = "info@rayconycr.com";
+  $destinatario = "citas@rayconycr.com";
   $asunto = "Nueva cita para servicio de $servicio";
   mail($destinatario, $asunto, $mensaje);
 
