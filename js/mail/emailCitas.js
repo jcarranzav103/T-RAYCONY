@@ -1,6 +1,6 @@
 $(function() {
 
-    $("#miFormularioCitas input,#contactForm textarea").jqBootstrapValidation({
+    $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
       preventSubmit: true,
       submitError: function($form, event, errors) {
         // additional error messages or events
@@ -8,11 +8,10 @@ $(function() {
       submitSuccess: function($form, event) {
         event.preventDefault(); // prevent default submit behaviour
         // get values from FORM
-        var service = $("select#servicio").val();
-        var name = $("input#nombre").val();
-        var email = $("input#correo").val();
-        var date = $("input#fecha").val();
-        var time = $("input#hora").val();
+        var name = $("input#name").val();
+        var email = $("input#email").val();
+        var phone = $("input#phone").val();
+        var message = $("textarea#message").val();
         var firstName = name; // For Success/Failure Message
         // Check for white space in name for Success/Fail message
         if (firstName.indexOf(' ') >= 0) {
@@ -21,14 +20,13 @@ $(function() {
         $this = $("#sendMessageButton");
         $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
         $.ajax({
-          url: "././mail/emailCita.php",
+          url: "././mail/contact_me.php",
           type: "POST",
           data: {
-            service:service,
             name: name,
-            date: date,
+            phone: phone,
             email: email,
-            time: time
+            message: message
           },
           cache: false,
           success: function() {
