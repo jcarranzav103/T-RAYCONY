@@ -1,26 +1,23 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  // Obtiene los datos del formulario
-  $servicio = $_POST["servicio"];
-  $nombre = $_POST["nombre"];
-  $correo = $_POST["correo"];
-  $fecha = $_POST["fecha"];
-  $hora = $_POST["hora"];
+  $para = "citas@rayconycr.com";
+  $asunto = "Nueva cita";
+  $mensaje = "Se ha agendado una nueva cita:\n\n";
+  $mensaje .= "Servicio: " . $_POST["servicio"] . "\n";
+  $mensaje .= "Nombre: " . $_POST["nombre"] . "\n";
+  $mensaje .= "Correo: " . $_POST["correo"] . "\n";
+  $mensaje .= "Fecha de la cita: " . $_POST["fecha"] . "\n";
+  $mensaje .= "Hora de la cita: " . $_POST["hora"] . "\n";
 
-  // Crea el mensaje del correo electrónico
-  $mensaje = "Servicio: $servicio\n";
-  $mensaje .= "Nombre: $nombre\n";
-  $mensaje .= "Correo: $correo\n";
-  $mensaje .= "Fecha: $fecha\n";
-  $mensaje .= "Hora: $hora\n";
+  $headers = "From: remitente@example.com\r\n";
+  $headers .= "Reply-To: remitente@example.com\r\n";
+  $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
-  // Envia el correo electrónico
-  $destinatario = "citas@rayconycr.com";
-  $asunto = "Nueva cita para servicio de $servicio";
-  mail($destinatario, $asunto, $mensaje);
-
-  // Redirecciona a una página de confirmación
-  header("Location: confirmacion.html");
-  exit();
+  if (mail($para, $asunto, $mensaje, $headers)) {
+    echo "El correo electrónico se envió correctamente.";
+  } else {
+    echo "Hubo un error al enviar el correo electrónico.";
+  }
 }
 ?>
+
