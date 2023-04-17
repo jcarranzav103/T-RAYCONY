@@ -150,7 +150,8 @@
                             <i class="bi bi-geo-alt fs-1 text-primary me-3"></i>
                             <div class="text-start">
                                 <h5 class="mb-0">Nuestra Oficina</h5>
-                                <span>San Antonio de Belen, 50 mts oeste de la farmacia fischel , San Antonio, Costa Rica.</span>
+                                <span>San Antonio de Belen, 50 mts oeste de la farmacia fischel , San Antonio, Costa
+                                    Rica.</span>
                             </div>
                         </div>
                         <div class="d-flex align-items-center mb-2">
@@ -173,8 +174,9 @@
 
                 <!-- Cambio en formulario para enviar correo -->
 
-                <div class="col-xl-4 col-lg-6 wow slideInUp" data-wow-delay="0.3s">
-                    <form id="contactForm" onsubmit="sendEmail()">
+                <div class="col-xl-4 col-lg-6 wow slideInUp" data-wow-delay="0.3s"
+                    style="background-color: rgba(100, 148, 237, 0.613);">
+                    <!-- <form id="contactForm" onsubmit="sendEmail()">
                         <div class="row g-3">
                             <div class="col-12">
 
@@ -205,13 +207,54 @@
                                     mensaje</button>
                             </div>
                         </div>
+                    </form> -->
+                    <form id="contactForm" name="sentMessage" novalidate="novalidate" style="margin-top: 10%;">
+                        <div class="row g-3">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <input class="form-control border-0 bg-light px-4" id="name" type="text"
+                                        placeholder="Tu nombre" required="required"
+                                        data-validation-required-message="Por favor, ingresa tu nombre."
+                                        style="height: 55px;">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control border-0 bg-light px-4" id="email" type="email"
+                                        placeholder="Tu correo" required="required"
+                                        data-validation-required-message="Por favor, ingresa tu correo."
+                                        style="height: 55px;">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control border-0 bg-light px-4" id="phone" type="tel"
+                                        placeholder="Tu teléfono" required="required"
+                                        data-validation-required-message="Por favor, ingresa tu teléfono."
+                                        style="height: 55px;">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <textarea class="form-control border-0 bg-light px-4" id="message"
+                                        placeholder="Tu mensaje" required="required"
+                                        data-validation-required-message="Por favor, ingresa tu mensaje."></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div>
+                                <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase"
+                                    type="submit">Enviar mensaje</button>
+                            </div>
+                        </div>
                     </form>
                 </div>
 
                 <!-- Mapa y ruta del sitio -->
                 <div class="col-xl-4 col-lg-12 wow slideInUp" data-wow-delay="0.6s">
                     <div id="map" class="position-relative rounded w-100 h-100" style="min-height: 400px; border:0;"
-                        allowfullscreen="" aria-hidden="false" tabindex="0"></div>                    
+                        allowfullscreen="" aria-hidden="false" tabindex="0"></div>
                 </div>
             </div>
         </div>
@@ -320,7 +363,10 @@
     <script src="js/main.js"></script>
 
     <!-- Email Javascript -->
-
+    <!-- Correos Citas -->
+    <script src="js/mail/jquery.js"></script>
+    <script src="js/mail/jqBootstrapValidation.js"></script>
+    <script src="js/mail/emailContacto.js"></script>
 
 </body>
 
