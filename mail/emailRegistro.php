@@ -1,8 +1,13 @@
 <?php
 // Check for empty fields
 if(empty($_POST['name'])      ||
-   empty($_POST['email'])     ||
+   empty($_POST['birthdate'])     ||
+   empty($_POST['age'])     ||
    empty($_POST['phone'])     ||
+   empty($_POST['email'])     ||
+   empty($_POST['income_range'])     ||
+   empty($_POST['academic_degree'])     ||
+   empty($_POST['gender'])     ||
    empty($_POST['message'])   ||
    !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
    {
