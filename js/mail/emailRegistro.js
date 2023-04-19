@@ -20,7 +20,7 @@ $(function() {
         $this = $("#sendMessageButton");
         $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
         $.ajax({
-          url: "././mail/emailCita.php",
+          url: "././mail/emailRegistro.php",
           type: "POST",
           data: {
             name: name,
@@ -30,17 +30,10 @@ $(function() {
           },
           cache: false,
           success: function() {
-            // Success message
-            // $('#success').html("<div class='alert alert-success'>");
-            // $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-            //   .append("</button>");
-            // $('#success > .alert-success')
-            //   .append("<strong>Your message has been sent. </strong>");
-            // $('#success > .alert-success')
-            //   .append('</div>');
+            // Success message           
             Swal.fire({
               icon: 'success',
-              title: 'Tu solicitud de cita se ha enviado. Pronto estaremos en contacto',
+              title: 'Tu registro se ha enviado. Pronto estaremos en contacto',
               showConfirmButton: false,
               timer: 1500
             });
@@ -48,12 +41,7 @@ $(function() {
             $('#contactForm').trigger("reset");
           },
           error: function() {
-            // Fail message
-            // $('#success').html("<div class='alert alert-danger'>");
-            // $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-            //   .append("</button>");
-            // $('#success > .alert-danger').append($("<strong>").text("Sorry " + firstName + ", it seems that my mail server is not responding. Please try again later!"));
-            // $('#success > .alert-danger').append('</div>');
+            // Fail message           
             Swal.fire({
               icon: 'error',
               title: 'Disculpa ' + firstName + ', En este momento el servidor no responde. Por favor intenta luego!',
