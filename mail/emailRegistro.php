@@ -20,7 +20,7 @@ if(empty($_POST['name'])             ||
    $phone = strip_tags(htmlspecialchars($_POST['phone']));
    $message = strip_tags(htmlspecialchars($_POST['message']));
    $birthdate = strip_tags(htmlspecialchars($_POST['birthdate']));
-   // $age = strip_tags(htmlspecialchars($_POST['age']));   
+   $age = strip_tags(htmlspecialchars($_POST['age']));   
    // $income_range = strip_tags(htmlspecialchars($_POST['income_range']));
    // $academic_degree = strip_tags(htmlspecialchars($_POST['academic_degree']));
    // $gender = strip_tags(htmlspecialchars($_POST['gender']));
