@@ -10,15 +10,15 @@ if(empty($_POST['name'])      ||
    return false;
    }
    
-$name = strip_tags(htmlspecialchars($_POST['name']));
-$birthdate = strip_tags(htmlspecialchars($_POST['birthdate']));
-$age = strip_tags(htmlspecialchars($_POST['age']));
-$phone = strip_tags(htmlspecialchars($_POST['phone']));
-$email = strip_tags(htmlspecialchars($_POST['email']));
-$income_range = strip_tags(htmlspecialchars($_POST['income_range']));
-$academic_degree = strip_tags(htmlspecialchars($_POST['academic_degree']));
-$gender = strip_tags(htmlspecialchars($_POST['gender']));
-$message = strip_tags(htmlspecialchars($_POST['message']));
+   $name = strip_tags(htmlspecialchars($_POST['name']));
+   $birthdate = strip_tags(htmlspecialchars($_POST['birthdate']));
+   $age = strip_tags(htmlspecialchars($_POST['age']));
+   $phone = strip_tags(htmlspecialchars($_POST['phone']));
+   $email = strip_tags(htmlspecialchars($_POST['email']));
+   $income_range = strip_tags(htmlspecialchars($_POST['income_range']));
+   $academic_degree = strip_tags(htmlspecialchars($_POST['academic_degree']));
+   $gender = strip_tags(htmlspecialchars($_POST['gender']));
+   $message = strip_tags(htmlspecialchars($_POST['message']));
 
    
 // Create the email and send the message
