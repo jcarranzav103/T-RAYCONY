@@ -21,21 +21,29 @@ $(function () {
       if (firstName.indexOf(' ') >= 0) {
         firstName = name.split(' ').slice(0, -1).join(' ');
       }
+
+      // Crear la tabla y almacenar el código HTML en una variable
+      var tablaHTML = '<table class="table">';
+      tablaHTML += '<tr><td>Nombre:</td><td>' + name + "</td></tr>";
+      tablaHTML += '<tr><td>Fecha de nacimiento:</td><td>' + birthdate + '</td></tr>';
+      tablaHTML += '<tr><td>Edad:</td><td>' + age + '</td></tr>';
+      tablaHTML += '<tr><td>Teléfono:</td><td>' + phone + '</td></tr>';
+      tablaHTML += '<tr><td>Email:</td><td>' + email + '</td></tr>';
+      tablaHTML += '<tr><td>Rango de ingresos:</td><td>' + income_range + '</td></tr>';
+      tablaHTML += '<tr><td>Nivel académico:</td><td>' + academic_degree + '</td></tr>';
+      tablaHTML += '<tr><td>Género:</td><td>' + gender + '</td></tr>';
+      tablaHTML += '<tr><td>Mensaje:</td><td>' + message + '</td></tr>';
+      tablaHTML += '</table>';
+
+
       $this = $("#sendMessageButton");
       $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
       $.ajax({
         url: "././mail/emailRegistro.php",
         type: "POST",
         data: {
-          name: name,
-          birthdate: birthdate,
-          age: age,
-          phone: phone,
-          email: email,
-          income_range: income_range,
-          academic_degree: academic_degree,
-          gender: gender,
-          message: message
+          email: email,        
+          message: tablaHTML
         },
         cache: false,
         success: function () {
@@ -89,3 +97,4 @@ function calcularEdad() {
 
   return edad;
 }
+
