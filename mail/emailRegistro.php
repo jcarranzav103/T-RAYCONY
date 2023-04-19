@@ -23,5 +23,6 @@ $headers = "From: noreply@rayconycr.com\n"; // This is the email address the gen
 $headers .= "Reply-To: $email_address";  
 $headers .= "Content-Type: text/html; charset=UTF-8\n"; 
 mail($to,$email_subject,$email_body,$headers);
-return true;         
+return true; 
+        
 ?>
