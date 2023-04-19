@@ -47,7 +47,7 @@ $(function () {
             timer: 1500
           });
           //clear all fields
-          $('#contactForm').trigger("reset");
+          $('#registerForm').trigger("reset");
         },
         error: function () {
           // Fail message           
@@ -58,7 +58,7 @@ $(function () {
             timer: 5500
           });
           //clear all fields
-          $('#contactForm').trigger("reset");
+          $('#registerForm').trigger("reset");
         },
         complete: function () {
           setTimeout(function () {
