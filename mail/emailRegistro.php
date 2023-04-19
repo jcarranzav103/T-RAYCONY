@@ -19,7 +19,7 @@ if(empty($_POST['name'])             ||
    $email_address = strip_tags(htmlspecialchars($_POST['email']));
    $phone = strip_tags(htmlspecialchars($_POST['phone']));
    $message = strip_tags(htmlspecialchars($_POST['message']));
-   // $birthdate = strip_tags(htmlspecialchars($_POST['birthdate']));
+   $birthdate = strip_tags(htmlspecialchars($_POST['birthdate']));
    // $age = strip_tags(htmlspecialchars($_POST['age']));   
    // $income_range = strip_tags(htmlspecialchars($_POST['income_range']));
    // $academic_degree = strip_tags(htmlspecialchars($_POST['academic_degree']));
@@ -72,7 +72,8 @@ $to = 'registro@rayconycr.com'; // Add your email address inbetween the '' repla
 $email_subject = "Mensaje del sitio web de :  $name";
 $email_body = "Tu has recibido un mensaje desde la pagina de RayCony CR.\n\nAcá los detalles:\n\n" . $table;
 $headers = "From: noreply@rayconycr.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
-$headers .= "Reply-To: $email_address";   
+$headers .= "Reply-To: $email_address";  
+$headers .= "Content-Type: text/html; charset=UTF-8\n"; 
 mail($to,$email_subject,$email_body,$headers);
 return true;         
 ?>
