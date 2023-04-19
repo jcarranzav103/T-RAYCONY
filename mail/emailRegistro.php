@@ -27,7 +27,7 @@ if(empty($_POST['name'])      ||
 
    
 // Create the email and send the message
-$to = 'registros@rayconycr.com;'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
+$to = 'registros@rayconycr.com'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
 $email_subject = "Registro enviado por:  $name";
 $email_body = "Has recibido una solicitud de registro con los siguientes detalles.\n\n";
 
