@@ -1,6 +1,7 @@
 ---
 deployment:
   tasks:
-    - cp -r /home/uaaypwotthkv/T-RAYCONY-GIT/* /home/uaaypwotthkv/public_html/
+    - cp -R /home/uaaypwotthkv/T-RAYCONY-GIT/* /home/uaaypwotthkv/public_html/
+
 
    
