@@ -1,6 +1,6 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/uaaypwotthkv/public_html/
-    - /bin/rsync -av /home/uaaypwotthkv/T-RAYCONY-GIT/ $DEPLOYPATH
+    - cp -r /home/uaaypwotthkv/T-RAYCONY-GIT/* /home/uaaypwotthkv/public_html/
+
    
