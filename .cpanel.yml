@@ -2,5 +2,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/uaaypwotthkv/public_html/
-    - /bin/rsyng -av T-RAYCONY-GIT $DEPLOYPATH
+    - /bin/rsyng -av /T-RAYCONY-GIT/ $DEPLOYPATH
     - /bin/cp style.css $DEPLOYPATH
