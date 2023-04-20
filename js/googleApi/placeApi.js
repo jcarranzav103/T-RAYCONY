@@ -1,5 +1,5 @@
 var datos;
-
+let allReviews = [];
 function getPlaceDetails(placeId) {
     // Hacer una solicitud a la API Place de Google
     const request = {
@@ -14,10 +14,12 @@ function getPlaceDetails(placeId) {
       if (status === google.maps.places.PlacesServiceStatus.OK) {
         // Obtener las reseñas del lugar
         const reviews = place.reviews;
+        allReviews = allReviews.concat(reviews);
         datos=reviews;
         // Hacer algo con las reseñas, por ejemplo, imprimir en la consola
         console.log(reviews);
         cargarDatos();
+        
       }
     });
 
