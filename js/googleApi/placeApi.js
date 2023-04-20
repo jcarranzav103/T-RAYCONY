@@ -13,7 +13,7 @@ function getPlaceDetails(placeId) {
     service.getDetails(request, (place, status) => {
       if (status === google.maps.places.PlacesServiceStatus.OK) {
         // Obtener las reseñas del lugar
-        const reviews = place.reviews.slice(0, 5);
+        const reviews = place.reviews.slice(0, 10);
         allReviews = allReviews.concat(reviews);
         datos=reviews;
         // Hacer algo con las reseñas, por ejemplo, imprimir en la consola
