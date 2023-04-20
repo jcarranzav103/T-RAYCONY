@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>RayCony CR</title>
+    <title>DentCare - Dental Clinic Website Template</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -27,10 +27,6 @@
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
     <link href="lib/twentytwenty/twentytwenty.css" rel="stylesheet" />
 
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -39,6 +35,22 @@
 </head>
 
 <body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary m-1" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+        <div class="spinner-grow text-dark m-1" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+        <div class="spinner-grow text-secondary m-1" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
     <!-- Topbar Start -->
     <div class="container-fluid bg-light ps-5 pe-0 d-none d-lg-block">
         <div class="row gx-0">
@@ -77,11 +89,11 @@
                 <a href="index.html" class="nav-item nav-link">Inicio</a>
                 <a href="about.html" class="nav-item nav-link">Sobre</a>
                 <a href="service.html" class="nav-item nav-link">Servicios</a>
-                <a href="contact.html" class="nav-item nav-link active">Contactanos</a>
+                <a href="contact.html" class="nav-item nav-link active">Contact</a>
             </div>
             <button type="button" class="btn text-dark" data-bs-toggle="modal" data-bs-target="#searchModal"><i
                     class="fa fa-search"></i></button>
-                    <a href="register.html" class="btn btn-primary py-2 px-4 ms-3">Registrarse</a>
+            <a href="register.html" class="btn btn-primary py-2 px-4 ms-3">Registrarse</a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -112,12 +124,10 @@
     <div class="container-fluid bg-primary py-5 hero-header mb-5">
         <div class="row py-3">
             <div class="col-12 text-center">
-                <h1 class="display-3 text-white animated zoomIn">Servicios</h1>
-                <a href="index.html" class="h4 text-white">Inicio</a>
+                <h1 class="display-3 text-white animated zoomIn">Services</h1>
+                <a href="" class="h4 text-white">Home</a>
                 <i class="far fa-circle text-white px-2"></i>
-                <a href="" class="h4 text-white">Servicios</a>
-                <i class="far fa-circle text-white px-2"></i>
-                <a href="" class="h4 text-white">Catálogo</a>
+                <a href="" class="h4 text-white">Services</a>
             </div>
         </div>
     </div>
@@ -127,116 +137,186 @@
     <!-- Service Start -->
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
-            <div class="col-lg-12">
-                <div class="section-title mb-5">
-                    <h5 class="position-relative d-inline-block text-primary text-uppercase">Nuestros servicios</h5>
-                    <h1 class="display-5 mb-0">Te ofrecemos la mejor calidad</h1>
-                </div>                   
-            </div>
             <div class="row g-5 mb-5">
-                <div class="col-lg-6 wow zoomIn" data-wow-delay="0.3s" style="min-height: 600px;">
+                <div class="col-lg-5 wow zoomIn" data-wow-delay="0.3s" style="min-height: 400px;">
                     <div class="twentytwenty-container position-relative h-100 rounded overflow-hidden">
-                        <img class="position-absolute w-100 h-100" src="img/Catalogo asientos (17).jpeg" style="object-fit: cover;">
-                        <img class="position-absolute w-100 h-100" src="img/Catalogo asientos (19).jpeg" style="object-fit: cover;">
+                        <img class="position-absolute w-100 h-100" src="img/Catalogo asientos (17).jpeg"
+                            style="object-fit: cover;">
+                        <img class="position-absolute w-100 h-100" src="img/Catalogo asientos (19).jpeg"
+                            style="object-fit: cover;">
                     </div>
-                </div> 
-                
-                <div class="col-lg-6 wow zoomIn" data-wow-delay="0.3s" style="min-height: 600px;">
-                    <div class="twentytwenty-container position-relative h-100 rounded overflow-hidden">
-                        <img class="position-absolute w-100 h-100" src="img/service-6.jpg" style="object-fit: cover;">
-                        <img class="position-absolute w-100 h-100" src="img/service-8.jpg" style="object-fit: cover;">
+                </div>
+                <div class="col-lg-7">
+                    <div class="section-title mb-5">
+                        <h5 class="position-relative d-inline-block text-primary text-uppercase">Nuestros trabajos</h5>
+                        <h1 class="display-5 mb-0">Ofrecemos los mejores trabajos para usted</h1>
                     </div>
-                </div>   
+                    <div class="row g-5">
+                        <div class="col-md-6 service-item wow zoomIn" data-wow-delay="0.6s">
+                            <div class="rounded-top overflow-hidden">
+                                <img class="img-fluid" src="img/Catalogo (20).jpeg" alt="">
+                            </div>
+                            <div class="position-relative bg-light rounded-bottom text-center p-4">
+                                <h5 class="m-0">Tapisado</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-6 service-item wow zoomIn" data-wow-delay="0.9s">
+                            <div class="rounded-top overflow-hidden">
+                                <img class="img-fluid" src="img/Catalogo (12).jpeg" alt="">
+                            </div>
+                            <div class="position-relative bg-light rounded-bottom text-center p-4">
+                                <h5 class="m-0">Cambio de material</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-            
-            
-                <div class="col-lg-12  wow zoomIn" data-wow-delay="0.9s">
-                    <div class="position-relative bg-light rounded h-100 d-flex flex-column align-items-center justify-content-center text-center p-4">
-                         <!-- ======= Portfolio Section ======= -->
-                        <div class="container">
-                            <div class="row">
-                                <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <h1 class="gallery-title">Catálogo</h1>
-                                </div>
-
-                                <div align="center" class="wow zoomIn">
-                                    <button class="btn btn-default filter-button" data-filter="all">Todo</button>
-                                    <button class="btn btn-default filter-button" data-filter="asientos">Asientos</button>
-                                    <button class="btn btn-default filter-button" data-filter="forros">Forros</button>
-                                    <button class="btn btn-default filter-button" data-filter="lonas">Lonas</button>
-                                    <button class="btn btn-default filter-button" data-filter="general">General</button>
-                                </div>
-                                <br />
-
-                                <div class="service-item gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter asientos wow zoomIn">
-                                    <img src="img/Catalogo asientos (5).jpeg" class="img-responsive ">
-                                </div>
-
-                                <div class="service-item gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter asientos wow zoomIn">
-                                    <img src="img/Catalogo asientos (16).jpeg" class="img-responsive">
-                                </div>
-
-                                <div class="service-item gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter asientos wow zoomIn">
-                                    <img src="img/Catalogo asientos (17).jpeg" class="img-responsive">
-                                </div>
-
-                                <div class="service-item gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter asientos wow zoomIn">
-                                    <img src="img/Catalogo asientos (6).jpeg" class="img-responsive">
-                                </div>
-
-                                <div class="service-item gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter asientos wow zoomIn">
-                                    <img src="img/Catalogo asientos (4).jpeg" class="img-responsive">
-                                </div>
-
-                                <div class="service-item gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter forros wow zoomIn">
-                                    <img src="img/Catalogo forros (10).jpeg" class="img-responsive">
-                                </div>
-
-                                <div class="service-item gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter forros wow zoomIn">
-                                    <img src="img/Catalogo forros (11).jpeg" class="img-responsive">
-                                </div>
-
-                                <div class="service-item gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter forros wow zoomIn">
-                                    <img src="img/Catalogo forros (12).jpeg" class="img-responsive">
-                                </div>
-
-                                <div class="service-item gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter forros wow zoomIn">
-                                    <img src="img/Catalogo forros (13).jpeg" class="img-responsive">
-                                </div>
-
-                                <div class="service-item gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter forros wow zoomIn">
-                                    <img src="img/Catalogo forros (14).jpeg" class="img-responsive">
-                                </div>
-
-                                <div class="service-item gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter lonas wow zoomIn">
-                                    <img src="img/Catalogo (8).jpeg" class="img-responsive">
-                                </div>
-
-                                <div class="service-item gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter lonas wow zoomIn">
-                                    <img src="img/Catalogo (26).jpeg" class="img-responsive">
-                                </div>
-                                <div class="service-item gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter lonas wow zoomIn">
-                                    <img src="img/Catalogo (30).jpeg" class="img-responsive">
-                                </div>
-                                <div class="service-item gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter lonas wow zoomIn">
-                                    <img src="img/Catalogo (31).jpeg" class="img-responsive">
-                                </div>
-                                <div class="service-item gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter lonas wow zoomIn">
-                                    <img src="img/Catalogo (22).jpeg" class="img-responsive">
-                                </div>
-                                <div class="service-item gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter general wow zoomIn">
-                                    <img src="img/Catalogo (12).jpeg" class="img-responsive">
-                                </div>
-                                <div class="service-item gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter general wow zoomIn">
-                                    <img src="img/Catalogo (22).jpeg" class="img-responsive">
-                                </div>
-                                <div class="service-item gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter general wow zoomIn">
-                                    <img src="img/Catalogo general (6).jpeg" class="img-responsive">
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-12 service-item wow zoomIn" data-wow-delay="0.9s">
+                    <div
+                        class="position-relative bg-primary rounded h-100 d-flex flex-column align-items-center justify-content-center text-center p-4" style="background-color: rgba(30, 143, 255, 0.237);">
+                        <h3 class="text-white mb-3">Catálogo</h3>
+                        <div class="filter filter-basic">
+                            <div class="filter-nav">
+                                <button class="btn btn-success active filter-button" data-filter="">Todo</button>
+                                <button class="btn btn-primary filter-button" data-filter="asiento">Asientos</button>
+                                <button class="btn btn-primary filter-button" data-filter="lona">Lonas</button>
+                                <button class="btn btn-primary filter-button"
+                                    data-filter="forro">Forros</button>
+                            </div>
+                            <div class="filter-gallery">
+                                <div class="row">
+                                    <div class="col-md-3 my-1">
+                                        <div class="" data-category="asiento">
+                                            <div class="item-content">
+                                                <img src="img/Catalogo asientos (6).jpeg"
+                                                    alt="image" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 my-1">
+                                        <div class="" data-category="forro">
+                                            <div class="item-content">
+                                                <img src="img/Catalogo forros (11).jpeg"
+                                                    alt="image" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 my-1">
+                                        <div class="" data-category="lona">
+                                            <div class="item-content">
+                                                <img src="img/Catalogo (26).jpeg"
+                                                    alt="image" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 my-1">
+                                        <div class="" data-category="forro">
+                                            <div class="item-content">
+                                                <img src="img/Catalogo forros (14).jpeg"
+                                                    alt="image" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 my-1">
+                                        <div class="" data-category="asiento">
+                                            <div class="item-content">
+                                                <img src="img/Catalogo asientos (19).jpeg"
+                                                    alt="image" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 my-1">
+                                        <div class="" data-category="forro">
+                                            <div class="item-content">
+                                                <img src="img/Catalogo forros (10).jpeg"
+                                                    alt="image" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 my-1">
+                                        <div class="" data-category="forro">
+                                            <div class="item-content">
+                                                <img src="img/Catalogo forros (12).jpeg"
+                                                    alt="image" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 my-1">
+                                        <div class="" data-category="asiento">
+                                            <div class="item-content">
+                                                <img src="img/Catalogo asientos (4).jpeg"
+                                                    alt="image" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 my-1">
+                                        <div class="" data-category="lona">
+                                            <div class="item-content">
+                                                <img src="img/Catalogo (30).jpeg"
+                                                    alt="image" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 my-1">
+                                        <div class="" data-category="lona">
+                                            <div class="item-content">
+                                                <img src="img/Catalogo (8).jpeg"
+                                                    alt="image" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 my-1">
+                                        <div class="" data-category="lona">
+                                            <div class="item-content">
+                                                <img src="img/Catalogo (31).jpeg"
+                                                    alt="image" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 my-1">
+                                        <div class="" data-category="lona">
+                                            <div class="item-content">
+                                                <img src="img/Catalogo (9).jpeg"
+                                                    alt="image" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 my-1">
+                                        <div class="" data-category="lona">
+                                            <div class="item-content">
+                                                <img src="img/Catalogo (22).jpeg"
+                                                    alt="image" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 my-1">
+                                        <div class="" data-category="asiento">
+                                            <div class="item-content">
+                                                <img src="img/Catalogo asientos (7).jpeg"
+                                                    alt="image" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 my-1">
+                                        <div class="" data-category="forro">
+                                            <div class="item-content">
+                                                <img src="img/service-8.jpg"
+                                                    alt="image" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 my-1">
+                                        <div class="" data-category="asiento">
+                                            <div class="item-content">
+                                                <img src="img/Catalogo asientos (17).jpeg"
+                                                    alt="image" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- End Portfolio Section -->
                     </div>
                 </div>
             </div>

@@ -119,30 +119,31 @@
     
 })(jQuery);
 
-$(document).ready(function(){
-
-    $(".filter-button").click(function(){
-        var value = $(this).attr('data-filter');
+$('.filter-button').on('click', (e) => {
+    const filter = $(e.target).attr('data-filter');
+    console.log(filter);
+       const items = $('.item-content').parent();
+    for (item of items) {
+      if (filter == '') {
         
-        if(value == "all")
-        {
-            //$('.filter').removeClass('hidden');
-            $('.filter').show('1000');
-        }
-        else
-        {
-//            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
-//            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
-            $(".filter").not('.'+value).hide('3000');
-            $('.filter').filter('.'+value).show('3000');
-            
-        }
-    });
-    
-    if ($(".filter-button").removeClass("active")) {
-$(this).removeClass("active");
-}
-$(this).addClass("active");
-
-});
+          $(item).addClass('animated zoomIn faster');
+        $(item).parent().addClass('animated zoomIn faster');
+        $(item).removeClass('d-none');
+        $(item).parent().removeClass('d-none');
+        
+       
+        console.log('x');
+      }else if ($(item).attr('data-category') == filter) {
+        $(item).addClass('animated zoomIn faster');
+        $(item).parent().addClass('animated zoomIn faster');
+        $(item).removeClass('d-none');
+        $(item).parent().removeClass('d-none');
+      } else {
+        $(item).addClass('d-none');
+        $(item).parent().addClass('d-none');
+        $(item).removeClass('animated zoomIn faster');
+        $(item).parent().removeClass('animated zoomIn faster');
+      }
+    }
+  });
 
